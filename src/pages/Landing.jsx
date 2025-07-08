@@ -2,7 +2,7 @@ import NavBar from '../components/layout/NavBar'
 import Hero from '../components/Hero'
 import Services from '../components/Services';
 import Footer from '../components/layout/Footer';
-import Cards from '../components/layout/Cards';
+import Projects from '../components/Projects';
 // import Resume from './Resume';
 
 function Landing() {
@@ -11,7 +11,7 @@ function Landing() {
       <NavBar />
       <Hero />
       <Services />
-      <Cards />
+      <Projects />
       <Footer />
     </>
   )
