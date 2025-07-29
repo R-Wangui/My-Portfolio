@@ -1,28 +1,30 @@
+// import { useState } from 'react';
 import '../components/styles/HeroStyles.css'
-// import Resume from '../assets/Resume-Wangui.pdf';
+import Resume from '../assets/Wangui Resume with Portfolio.pdf';
 
 
 function Hero() {
 
-  // const pdfUrl = '/assets/Resume-Wangui.pdf';
+  // const [loading, setLoading] = useState();
 
-  // add an event for when you click the MouseEvent, you download the resume
-
-  // const downloadResume = () => {
-  //   const link = document.createElement('a');
-  //   link.href = Resume;
-  //   link.download = 'myresume.pdf';
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-  // }
-  // document.getElementById('heroButton').onclick = download(pdfUrl)
+  // Click event for the resume button, you download the resume
+  const downloadResume = () => {
+    window.open(Resume, '_blank')
+    // const link = document.createElement('a');
+    // link.href = Resume;
+    // link.download = 'myresume.pdf';
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
+    // alert("Do you want to dowload this resume?")
+  }
+  // document.getElementById('heroButton').onclick = downloadResume(pdfUrl)
   return (
     <>
       <div id="hero">
         <div className="tagline">
           <h1>
-            Hi I&apos;m <span className='text-fuchsia-500'>Wangui</span>,
+            Hi I&apos;m <span className="text-fuchsia-500">Wangui</span>,
           </h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +41,13 @@ function Hero() {
             />
           </svg>
           <h4>I design and develop web applications</h4>
-          {/* <Button variant="outline-secondary" size='lg' id='heroButton' onClick={downloadResume}>Get Resume</Button>{' '} */}
+          <button
+            id="heroButton"
+            className="border rounded-lg px-4 py-1"
+            onClick={() => downloadResume()}
+          >
+            Get Resume
+          </button>{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="61.6228"
