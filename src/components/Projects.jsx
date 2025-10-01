@@ -1,12 +1,43 @@
+import CardSwap, { Card } from "./layout/Cards";
 
 function Projects() {
   return (
     <>
-      <div className=" my-12">
+      <div className="my-4">
         <h2 className="text-gray-300 text-3xl text-center">
           Projects I&apos;ve done
         </h2>
-        <div className="my-4 mx-8 grid grid-cols-1 gap-4 lg:grid lg:grid-cols-3 text-gray-300">
+        <div
+          className="relative h-240 left-0"
+          // style={{ height: "600px", position: "relative" }}
+        >
+          <CardSwap
+            cardDistance={60}
+            verticalDistance={70}
+            delay={5000}
+            pauseOnHover={false}
+          >
+            {pastProjects.map((item, i) => (
+              <Card
+                key={i}
+                className="border rounded-xl p-4 cursor-pointer text-gray-300"
+              >
+                <img src={item.image} />
+                <h3 className="my-6 text-xl">{item.project}</h3>
+                <p>{item.description}</p>
+                <p className=" mt-6 mb-4 font-light">{item.tools}</p>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  className="border rounded-sm px-4 py-1"
+                >
+                  View Project
+                </a>
+              </Card>
+            ))}
+          </CardSwap>
+        </div>
+        {/* <div className="my-4 mx-8 grid grid-cols-1 gap-4 lg:grid lg:grid-cols-3 text-gray-300">
           {pastProjects.map((item, i) => (
             <div key={i} className="border rounded-xl p-4 cursor-pointer">
               <img src={item.image} alt="Project image" className="" />
@@ -20,10 +51,9 @@ function Projects() {
               >
                 View Project
               </a>
-              {/* <button> Visit</button> */}
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </>
   );
@@ -31,6 +61,8 @@ function Projects() {
 
 export default Projects
 
+
+// List rendering
 const pastProjects = [
   {
     image: "/Images/Goldies.png",
@@ -47,8 +79,8 @@ const pastProjects = [
     project: "I-Sentry",
     description:
       "A product that provides a marketing solution to increase visibility for local food vendors to their customers.",
-    tools: "Nextjs, typescript, and tailwind css",
-    link: "",
+    tools: "ReactJs, JavaScript, and Bootstrap",
+    link: "https://localdishcorner.netlify.app/",
   },
   {
     image: "/Images/8.jpg",
@@ -56,8 +88,8 @@ const pastProjects = [
     project: "Local Dish Corner",
     description:
       "A product that provides a marketing solution to increase visibility for local food vendors to their customers.",
-    tools: "Nextjs, typescript, and tailwind css",
-    link: "",
+    tools: "React, typescript, and tailwind css",
+    link: "https://localdishcorner.netlify.app/",
   },
   {
     image: "/Images/8.jpg",

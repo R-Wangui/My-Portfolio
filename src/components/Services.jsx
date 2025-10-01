@@ -3,7 +3,7 @@
 function Services() {
   return (
     <>
-      <div className=" my-12">
+      <div className=" my-16">
         <h2 className="text-gray-300 text-3xl text-center">What I do</h2>
         <div className="my-8 mx-8 grid grid-cols-1 lg:grid lg:grid-cols-2 gap-8 font-light text-gray-300 text-center items-center ">
           {skills.map((service, i) => (

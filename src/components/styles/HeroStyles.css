@@ -1,13 +1,17 @@
 /* Styling for Hero section  */
 #hero {
     display: flex;
+    gap: 80px;
     font-family: "Barlow", sans-serif;
     color: rgb(218, 215, 215);
-    position: relative;
+    /* background-color: crimson; */
+    /* position: relative;
+    top: 40; */
+    z-index: 1;
   }
   .tagline {
     margin-left: 40px;
-    margin-top: 200px;
+    /* margin-top: 200px; */
   }
   .tagline h1 {
     font-size: 64px;
@@ -34,8 +38,8 @@
     /* z-index: 0; */
   }
   .profileImage {
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
     object-fit: cover;
     /* z-index: 1; */
     /* position: relative; */
