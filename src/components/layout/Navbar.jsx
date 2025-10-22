@@ -1,15 +1,19 @@
 // import React from 'react'
 
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <>
-      <div className="flex justify-center gap-8 py-8 text-gray-300 backdrop-blur-sm">
-        <a href="#">
+      <div className="flex justify-center gap-8 py-8 text-gray-600 bg-transparent">
+        <Link to={`/productdesign`}>UI/UX Design</Link>
+        <Link to={`/frontend`}>Frontend Development</Link>
+        {/* <a href="/productdesign">
           <h5>UI/UX Design</h5>
-        </a>
-        <a href="#">
+        </a> */}
+        {/* <a href="/frontend">
           <h5>Frontend Development</h5>
-        </a>
+        </a> */}
       </div>
       {/* <div>
         <a href="https://www.behance.net/wanguinjoroge" target="_blank">
