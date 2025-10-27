@@ -7,12 +7,14 @@ import Projects from '../components/Projects';
 function Landing() {
   return (
     <>
-      <Hero />
-      <Services />
-      <Projects />
-      <Footer />
+      <div id='landing'>
+        <Hero />
+        <Services />
+        <Projects />
+        <Footer />
+      </div>
     </>
-  )
+  );
 }
 
 export default Landing

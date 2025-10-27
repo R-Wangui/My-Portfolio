@@ -4,7 +4,7 @@ import '../styles/Footer.css'
 function Footer() {
   return (
     <>
-      <div className="my-12">
+      <div className="mt-12">
         <h3 className="text-gray-300 text-center text-2xl">
           Let&apos;s Connect and Talk
         </h3>
@@ -32,7 +32,7 @@ function Footer() {
             />
           </a>
         </div>
-        <hr className="text-gray-500 mt-8" />
+        <hr className="text-gray-500 mt-8 py-8" />
       </div>
     </>
   );

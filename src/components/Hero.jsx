@@ -2,8 +2,8 @@
 import '../components/styles/HeroStyles.css'
 import Resume from '../assets/Wangui Resume with Portfolio.pdf';
 import Navbar from './layout/Navbar';
-import DarkVeil from "./layout/Herobackground";
-// import Herobackground from './layout/Herobackground';
+// import DarkVeil from "./layout/Herobackground";
+
 
 
 function Hero() {
@@ -16,8 +16,8 @@ function Hero() {
   return (
     <>
       <Navbar />
-      <div
-        // className="w-full h-2.5 relative"
+      {/* <div
+        className="w-full h-2.5 relative"
         style={{ width: "100%", height: "600px", position: "relative", size: "32" }}
       >
         <DarkVeil />
@@ -30,7 +30,6 @@ function Hero() {
             width="69.24294"
             height="15.80886"
             viewBox="0 0 69.24294 15.80886"
-            // creator="Katerina Limpitsouni"
             className="underline"
           >
             <path
@@ -55,7 +54,6 @@ function Hero() {
             width="61.6228"
             height="37.3723"
             viewBox="0 0 61.6228 37.3723"
-            // creator="Katerina Limpitsouni"
             className="curledArrow"
           >
             <path
@@ -69,11 +67,10 @@ function Hero() {
             />
           </svg>
         </div>
-      </div>
-      {/* <DarkVeil /> */}
+      </div> */}
       <div id="hero">
-        <div className="tagline1">
-          {/* <h1>
+        <div className="m-12">
+          <h1 className="text-6xl font-bold">
             Hi I&apos;m <span className="text-fuchsia-500">Wangui</span>,
           </h1>
           <svg
@@ -90,13 +87,13 @@ function Hero() {
               origin="undraw"
             />
           </svg>
-          <h4>
+          <h4 className="text-xl">
             I design and develop web applications using Javascript, Typescript,
             React and NextJs.
           </h4>
           <button
             id="heroButton"
-            className="border rounded-lg px-4 py-1"
+            className="border rounded-lg px-4 py-1 cursor-pointer"
             onClick={() => downloadResume()}
           >
             Get Resume
@@ -118,14 +115,14 @@ function Hero() {
               d="M1.42197,15.29568C4.55526,10.57094,7.68855,5.8462,10.82185,1.12147l-1.17793,.15179c4.05423,3.68551,8.10846,7.37101,12.16269,11.05652,.71295,.64811,1.77681-.40964,1.06066-1.06066C18.81303,7.58361,14.7588,3.8981,10.70457,.2126c-.37148-.3377-.90297-.26283-1.17793,.15179C6.39335,5.08912,3.26006,9.81386,.12677,14.5386c-.53503,.80679,.76352,1.55882,1.29521,.75708h0Z"
               fill="#ffffff"
             />
-          </svg> */}
+          </svg>
         </div>
         <div className="heroImages">
-          {/* <img
+          <img
             src="/Images/Hero-image.png"
             alt="My profile"
             className="profileImage"
-          /> */}
+          />
         </div>
       </div>
     </>

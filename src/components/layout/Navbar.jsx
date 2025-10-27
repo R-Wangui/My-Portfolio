@@ -5,15 +5,20 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <>
-      <div className="flex justify-center gap-8 py-8 text-gray-600 bg-transparent">
-        <Link to={`/productdesign`}>UI/UX Design</Link>
-        <Link to={`/frontend`}>Frontend Development</Link>
-        {/* <a href="/productdesign">
-          <h5>UI/UX Design</h5>
-        </a> */}
-        {/* <a href="/frontend">
-          <h5>Frontend Development</h5>
-        </a> */}
+      <div className="flex justify-between mx-12 gap-8 py-8 text-gray-400 bg-transparent">
+        <div className="font-mono">
+          <Link to={`/`}>
+            <img
+              src="Images/Biggerprofile-copy.png"
+              alt=""
+              className="w-12 h-12 rounded-full bg-black"
+            />
+          </Link>
+        </div>
+        <div className="flex gap-8 justify-between">
+          <Link to={`/productdesign`}>UI/UX Design</Link>
+          <Link to={`/frontend`}>Frontend Development</Link>
+        </div>
       </div>
       {/* <div>
         <a href="https://www.behance.net/wanguinjoroge" target="_blank">

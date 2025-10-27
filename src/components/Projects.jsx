@@ -1,4 +1,5 @@
 import CardSwap, { Card } from "./layout/Cards";
+import { Link } from "react-router-dom";
 
 function Projects() {
   return (
@@ -36,7 +37,19 @@ function Projects() {
               </Card>
             ))}
           </CardSwap>
+          {/* <Link
+            to={`/frontend`}
+            className="border rounded-full border-gray-700 px-4 py-1 text-gray-300"
+          >
+            Go to Projects
+          </Link> */}
         </div>
+        <Link
+          to={`/frontend`}
+          className="border rounded-full border-gray-700 px-4 py-1 text-gray-300"
+        >
+          Go to Projects
+        </Link>
         {/* <div className="my-4 mx-8 grid grid-cols-1 gap-4 lg:grid lg:grid-cols-3 text-gray-300">
           {pastProjects.map((item, i) => (
             <div key={i} className="border rounded-xl p-4 cursor-pointer">

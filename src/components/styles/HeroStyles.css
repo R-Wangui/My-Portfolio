@@ -4,13 +4,13 @@
     gap: 80px;
     font-family: "Barlow", sans-serif;
     color: rgb(218, 215, 215);
-    /* background-color: crimson; */
+    /* background-color: black; */
     /* position: relative;
     top: 40; */
     z-index: 1;
   }
   .tagline {
-    margin-left: 40px;
+    margin: 40px;
     /* margin-top: 200px; */
   }
   .tagline h1 {
