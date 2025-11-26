@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Projects() {
   return (
     <>
-      <div className="my-4">
+      <div className="my-10 relative">
         <h2 className="text-gray-300 text-3xl text-center">
           Projects I&apos;ve done
         </h2>
@@ -46,7 +46,7 @@ function Projects() {
         </div>
         <Link
           to={`/frontend`}
-          className="border rounded-full border-gray-700 px-4 py-1 text-gray-300"
+          className="absolute right-[40px] border rounded-full border-gray-700 px-4 py-1 mb-20 text-gray-300 bg-red-400"
         >
           Go to Projects
         </Link>
@@ -104,13 +104,13 @@ const pastProjects = [
     tools: "React, typescript, and tailwind css",
     link: "https://localdishcorner.netlify.app/",
   },
-  {
-    image: "/Images/8.jpg",
-    role: "Design",
-    project: "I-Sentry",
-    description:
-      "A product that provides a marketing solution to increase visibility for local food vendors to their customers.",
-    tools: "Figma",
-    link: "",
-  },
+  // {
+  //   image: "/Images/8.jpg",
+  //   role: "Design",
+  //   project: "I-Sentry",
+  //   description:
+  //     "A product that provides a marketing solution to increase visibility for local food vendors to their customers.",
+  //   tools: "Figma",
+  //   link: "",
+  // },
 ];

@@ -8,7 +8,7 @@ export function Particles() {
       {dots.map((_, i) => (
         <motion.span
           key={i}
-          className="absolute w-1 h-1 bg-red-500 rounded-full"
+          className="absolute w-2 h-2 bg-pink-500 rounded-full"
           initial={{
             x: Math.random() * window.innerWidth,
             y: Math.random() * window.innerHeight,

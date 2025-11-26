@@ -69,8 +69,8 @@ function Hero() {
         </div>
       </div> */}
       <div id="hero">
-        <div className="m-12">
-          <h1 className="text-6xl font-bold">
+        <div className="text-center justify-items-center content-center p-12">
+          <h1 className="text-6xl font-bold align-center">
             Hi I&apos;m <span className="text-fuchsia-500">Wangui</span>,
           </h1>
           <svg
@@ -87,7 +87,7 @@ function Hero() {
               origin="undraw"
             />
           </svg>
-          <h4 className="text-xl">
+          <h4 className="text-xl mt-20">
             I design and develop web applications using Javascript, Typescript,
             React and NextJs.
           </h4>
@@ -117,11 +117,12 @@ function Hero() {
             />
           </svg>
         </div>
-        <div className="heroImages">
+        <div className="h-screen w-full overflow-hidden">
           <img
             src="/Images/Hero-image.png"
             alt="My profile"
-            className="profileImage"
+            className="w-full h-full object-contain"
+            // className="w-full h-full object-cover object-[center_8%] opacity-50"
           />
         </div>
       </div>

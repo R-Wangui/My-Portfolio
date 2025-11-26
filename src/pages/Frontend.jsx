@@ -197,9 +197,9 @@ const projects = [
     desc: "My personal portfolio built with Vite and Tailwind CSS, showcasing both design and development work with smooth animations.",
     tech: ["React", "Vite", "Tailwind", "Framer Motion"],
   },
-  {
-    title: "Link Management Platform",
-    desc: "Built a SaaS-style link management tool with CRUD functionality, drag-and-drop interface, and responsive layouts.",
-    tech: ["Next.js", "TypeScript", "Supabase", "ShadCN/UI"],
-  },
+  // {
+  //   title: "Link Management Platform",
+  //   desc: "Built a SaaS-style link management tool with CRUD functionality, drag-and-drop interface, and responsive layouts.",
+  //   tech: ["Next.js", "TypeScript", "Supabase", "ShadCN/UI"],
+  // },
 ];

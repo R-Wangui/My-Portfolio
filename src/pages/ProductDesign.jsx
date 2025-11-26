@@ -29,8 +29,9 @@ export default function productDesign() {
           </motion.div>
         </section>
         {/* Design Process Section */}
+
         <section className="mb-24">
-          <h2 className="text-3xl font-semibold text-center ">
+          <h2 className="text-3xl font-semibold text-pink-500 text-center m-4 ">
             My Design Process
           </h2>
           <p className="text-center mb-14">
