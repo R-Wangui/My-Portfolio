@@ -2,7 +2,7 @@
 #hero {
     display: flex;
     gap: 80px;
-    font-family: "Alan Sans", sans-serif;
+    font-family: "Barlow Sans", sans-serif;
     color: rgb(218, 215, 215);
     position: relative;
   }
