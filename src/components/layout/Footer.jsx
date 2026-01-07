@@ -65,13 +65,13 @@ function Footer() {
             <div>
               <h4 className="font-semibold mb-4 text-cyan-400">Quick Links</h4>
               <div className="space-y-2">
-                {["Home", "UI/UX", "Front-end"].map((link) => (
+                {footerLinks.map((link) => (
                   <a
                     key={link}
-                    href={`#${link.toLowerCase()}`}
+                    href={link.link}
                     className="block text-slate-400 hover:text-cyan-400 transition-colors"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 ))}
               </div>
@@ -138,5 +138,20 @@ function Footer() {
     </>
   );
 }
+
+const footerLinks = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "UI/UX",
+    link: "/productdesign",
+  },
+  {
+    name: "Front-end",
+    link: "/frontend"
+   },
+];
 
 export default Footer;

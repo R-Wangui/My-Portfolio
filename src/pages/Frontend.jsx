@@ -10,17 +10,24 @@ import {
   Github,
   ArrowUpRight,
   FileCode,
-  // FileCodeCorner,
   Server,
   Layers,
+  FolderCode,
 } from "lucide-react";
 
 export default function Frontend() {
-  
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <>
       <div className="min-h-screen bg-slate-950 text-slate-100">
-        <Navbar />
+        <Navbar variant="frontend" />
         <div className="relative text-white">
           <section
             id="home"
@@ -60,7 +67,7 @@ export default function Frontend() {
 
                 <div className="flex flex-wrap gap-4 mb-8">
                   {[
-                    // { label: "JavaScript", icon: FileCodeCorner },
+                    { label: "JavaScript", icon: FolderCode },
                     { label: "TypeScript", icon: FileCode },
                     { label: "React", icon: Box },
                     { label: "Next.js", icon: Server },
@@ -83,7 +90,8 @@ export default function Frontend() {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <motion.a
-                    href="#projects"
+                    // href="#projects"
+                    onClick={(e) => scrollToSection(e, "projects")}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold font-mono flex items-center justify-center gap-2 group"
@@ -367,7 +375,15 @@ const projects = [
     type: "AI-driven Analytics Application",
     description:
       "An intelligent analytics platform that automatically connects to developers’ work tools and uses AI to evaluate the quality, consistency, and impact of their contributions.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts"],
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Tanstack Query",
+      "Recharts",
+      "Zustand",
+      "ShadCn",
+    ],
     responsibilities: [
       "Designed and implemented a scalable analytics dashboard architecture using Next.js",
       "Integrated OAuth2 authentication flow with JWT token refresh mechanism",
@@ -398,7 +414,7 @@ const projects = [
       "Context API + Tanstack Query for state management",
       "Next.js with App Router for optimal performance",
     ],
-    github: "github.com/alexchen/fintrack",
+    // github: "github.com/alexchen/fintrack",
     live: "https://localdishcorner.netlify.app/",
     ongoing: true,
     gradient: "from-blue-500 to-cyan-500",
@@ -436,7 +452,7 @@ const projects = [
       "Tailwind CSS with custom design system",
       "Vercel Edge Functions for dynamic content",
     ],
-    github: "github.com/alexchen/streamhub",
+    // github: "github.com/alexchen/streamhub",
     live: "https://isentrytechnologies.com/",
     ongoing: false,
     gradient: "from-purple-500 to-pink-500",
@@ -450,8 +466,8 @@ const projects = [
     responsibilities: [
       "NextAuth and JWT for secure admin access and encrypted user sessions",
       "Implemented complex state management with Tanstack Query",
-      "Integrated Stripe for subscription billing with webhook handlers",
-      "Created comprehensive test suite with Jest and React Testing Library (85% coverage)",
+      // "Integrated Stripe for subscription billing with webhook handlers",
+      // "Created comprehensive test suite with Jest and React Testing Library (85% coverage)",
       "Established CI/CD pipeline with GitHub Actions for automated testing and deployment",
     ],
     highlights: [
@@ -477,7 +493,7 @@ const projects = [
       "Shadcn customized component library",
       "Comprehensive unit and integration tests",
     ],
-    github: "github.com/alexchen/taskflow",
+    // github: "github.com/alexchen/taskflow",
     live: "https://goldies-frontend-v3.vercel.app",
     ongoing: false,
     gradient: "from-green-500 to-emerald-500",

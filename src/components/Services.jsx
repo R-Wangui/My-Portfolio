@@ -3,27 +3,6 @@ import { motion } from "framer-motion";
 function Services() {
   return (
     <>
-      {/* <div className=" my-16">
-        <h2 className="text-gray-300 text-3xl text-center">What I do</h2>
-        <div className="my-8 mx-8 grid grid-cols-1 lg:grid lg:grid-cols-2 gap-8 font-light text-gray-300 text-center items-center ">
-          {skills.map((service, i) => (
-            <div key={i} className="border rounded-xl p-4 flex flex-col items-center">
-              <img
-                className="filter invert brightness-75 mb-5"
-                src={service.icon}
-                alt="Code or design icon"
-              />
-              <h5 className="mb-4 font-semibold text-xl">{service.role}</h5>
-              <ul className=" text-center list-disc list-inside">
-                {service.skill.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div> */}
-
       <section id="services" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.h2
@@ -85,13 +64,17 @@ const skills = [
   {
     title: "Design Systems",
     desc: "Creating scalable component libraries and design tokens for consistent brand experiences across products.",
-    tools: ["Storybook", "Figma Libraries", "CSS-in-JS", "Documentation"],
+    tools: [
+      "Storybook",
+      "Figma Libraries",
+      "Figma",
+      "AdobeXD",
+      "Documentation",
+    ],
   },
 ];
 
-
 export default Services;
-
 
 // const skills = [
 //   {

@@ -1,11 +1,11 @@
 import "tailwindcss";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Landing from './pages/Landing';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landing from "./pages/Landing";
 import ProductDesign from "./pages/ProductDesign";
 import Frontend from "./pages/Frontend";
 
-
 function App() {
+
   return (
     <>
       <BrowserRouter>
@@ -19,4 +19,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

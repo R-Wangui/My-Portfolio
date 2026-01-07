@@ -1,16 +1,16 @@
-
 import { motion } from "framer-motion";
 import { Code, MoveRight } from "lucide-react";
-import Navbar from "./layout/Navbar";
-import Resume from "../assets/Wangui Resume with Portfolio.pdf";
+// import Resume from "../assets/Wangui Njoroge (frontend dev).pdf";
+import Resume from "../assets/Wangui Njoroge (Frontend dev).pdf";
+// import Resume from "../assets/Wangui Resume with Portfolio.pdf";
 
 function Hero() {
   const downloadResume = () => {
     window.open(Resume, "_blank");
   };
+
   return (
     <>
-      <Navbar />
       <section
         id="home"
         className="min-h-screen flex items-center justify-center pt-16 px-4"
@@ -50,11 +50,10 @@ function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                // href="#projects"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-semibold flex items-center justify-center gap-2"
-                onClick={() => downloadResume}
+                className="px-8 py-4 cursor-pointer bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-semibold flex items-center justify-center gap-2"
+                onClick={() => downloadResume()}
               >
                 Get Resume
                 <MoveRight size={20} />

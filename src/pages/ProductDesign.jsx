@@ -3,7 +3,6 @@ import Navbar from "@/components/layout/Navbar";
 import Doodles from "@/components/ui/Doodles";
 import DesignProjectCard from "@/components/layout/DesignProjectCard";
 import { motion } from "framer-motion";
-// import { Link } from "react-router-dom";
 import {
   Heart,
   Lightbulb,
@@ -18,11 +17,11 @@ import {
 } from "lucide-react";
 
 export default function productDesign() {
+  
   return (
     <>
-      <Navbar />
+      <Navbar variant="uiux" />
       <div className="relative mb-20 h-full bg-gradient-to-b from-white via-gray-100 to-gray-50 text-gray-900 overflow-hidden">
-        {/* Background Animation */}
         <Doodles />
         {/* Hero */}
         <section className="min-h-screen relative z-10 mt-4 pt-16 px-4">
@@ -93,17 +92,25 @@ export default function productDesign() {
               </motion.div>
             ))}
           </motion.div>
+          {/* <motion.a
+            href="#projects"
+            whileHover={{ scale: 1.05, rotate: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className=" flex justify-center items-center  px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-shadow"
+          >
+            See My Work 🎨
+          </motion.a> */}
           <motion.div>
             <img
               src="/Images/Design hero.png"
               alt="design page hero"
-              className=" bg-amber-100"
+              className=""
             />
           </motion.div>
         </section>
         {/* Design Process Section */}
         <section className="mb-24">
-          <h2 className="text-3xl font-semibold text-pink-500 text-center m-4 ">
+          <h2 className="text-3xl font-semibold text-purple-500 text-center m-4 ">
             My Design Process
           </h2>
           <p className="text-center mb-14">
@@ -125,13 +132,13 @@ export default function productDesign() {
                   }`}
                 >
                   {/* Step number */}
-                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-pink-400">
+                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-purple-400">
                     0{index + 1}
                   </div>
 
                   {/* Icon circle */}
                   <div
-                    className="flex items-center justify-center w-20 h-20 text-purple-500 rounded-full bg-white border-2 shadow-lg mb-4"
+                    className="flex items-center justify-center w-20 h-20 text-white rounded-full bg-gradient-to-b from-red-300 to-pink-300 border-2 shadow-lg mb-4"
                     // style={{ borderColor: step.borderColor || "#e5e7eb" }}
                   >
                     {step.icon}
@@ -367,26 +374,3 @@ const designProjects = [
     ],
   },
 ];
-
-// const projects = [
-//   {
-//     title: "Sneaker Palace Redesign",
-//     desc: "Redesigned a sneaker shop????. Resulted in a 40% improvement in task completion time.",
-//     tools: ["Figma", "FigJam", "Notion"],
-//   },
-//   {
-//     title: "I-Sentry Website",
-//     desc: "Collaborated with another designer to design the I-Sentry website that showcases the company's value proposition, and products.",
-//     tools: ["Figma", "Maze", "Photoshop"],
-//   },
-//   {
-//     title: "SaaS Analytics Platform",
-//     desc: "Led the UX design for a B2B SaaS analytics product, optimizing navigation and introducing a modular dashboard layout.",
-//     tools: ["Figma", "Miro", "Illustrator"],
-//   },
-//   {
-//     title: "Portfolio Redesign",
-//     desc: "Redesigned my own design portfolio for better storytelling and interaction flow, emphasizing accessibility and clean layout systems.",
-//     tools: ["Figma", "Framer", "Notion"],
-//   },
-// ];

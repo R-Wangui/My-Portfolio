@@ -69,7 +69,7 @@ function Projects() {
             ))}
           </div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -83,7 +83,7 @@ function Projects() {
             >
               View All Projects <ChevronRight size={20} />
             </motion.a>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
     </>
@@ -115,12 +115,18 @@ const pastProjects = [
     link: "https://goldies-frontend-v3.vercel.app",
   },
   {
-    title: "Local Dish Corner",
+    title: "TeamIq",
     type: "Frontend Development",
-    desc: "Comprehensive e-commerce platform with real-time data visualization",
-    tags: ["React", "Tailwind", "Firebase"],
+    desc: "AI-driven Analytics Application",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Tanstack Query",
+      "Recharts",
+    ],
     gradient: "from-orange-500 to-red-500",
-    link: "https://localdishcorner.netlify.app/",
+    // link: "https://localdishcorner.netlify.app/",
   },
 ];
 
