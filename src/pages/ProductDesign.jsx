@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 
 export default function productDesign() {
-  
   return (
     <>
       <Navbar variant="uiux" />
@@ -109,17 +108,22 @@ export default function productDesign() {
           </motion.div>
         </section>
         {/* Design Process Section */}
-        <section className="mb-24">
-          <h2 className="text-3xl font-semibold text-purple-500 text-center m-4 ">
+        <section className="mb-24 p-4">
+          <h2 className="text-3xl font-semibold text-purple-500 text-center m-4">
             My Design Process
           </h2>
-          <p className="text-center mb-14">
+
+          <p className="text-center mb-14 max-w-xl mx-auto text-gray-600">
             I always apply the design thinking approach in every project I work
             on to ensure that I put the user front and center of the design.
           </p>
-          <div className=" w-full mx-auto p-10 mt-12">
+
+          <div className="w-full mx-auto px-4 md:px-10 mt-12">
             {/* Steps container */}
-            <div className=" flex justify-between items-start z-10 ">
+            <div className="relative flex flex-col gap-12 md:flex-row md:justify-between md:items-start">
+              {/* Vertical line for mobile */}
+              <div className="absolute left-6 top-0 bottom-0 w-px bg-purple-200 md:hidden" />
+
               {processSteps.map((step, index) => (
                 <motion.div
                   key={index}
@@ -127,71 +131,58 @@ export default function productDesign() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`relative flex flex-col items-center text-center flex-1 max-w-[180px] ${
-                    index % 2 === 0 ? "mt-0" : "mt-32 md:mt-40"
-                  }`}
+                  className={`
+            relative
+            flex gap-6
+            md:flex-col md:items-center md:text-center
+            md:flex-1 md:max-w-[180px]
+            ${index % 2 === 0 ? "md:mt-0" : "md:mt-32"}
+          `}
                 >
                   {/* Step number */}
-                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-purple-400">
+                  <div
+                    className="
+              absolute
+              -left-1 md:left-1/2
+              -top-1 md:-top-6
+              transform md:-translate-x-1/2
+              text-sm font-semibold text-purple-400
+            "
+                  >
                     0{index + 1}
                   </div>
 
                   {/* Icon circle */}
                   <div
-                    className="flex items-center justify-center w-20 h-20 text-white rounded-full bg-gradient-to-b from-red-300 to-pink-300 border-2 shadow-lg mb-4"
-                    // style={{ borderColor: step.borderColor || "#e5e7eb" }}
+                    className="
+              relative z-10
+              flex items-center justify-center
+              w-14 h-14 md:w-20 md:h-20
+              text-white
+              rounded-full
+              bg-gradient-to-b from-red-300 to-pink-300
+              border-2 shadow-lg
+              flex-shrink-0
+            "
                   >
                     {step.icon}
                   </div>
-                  {/* Title and description */}
-                  <h3 className="text-lg font-semibold mb-2 text-gray-800">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-gray-600">{step.description}</p>
+
+                  {/* Content */}
+                  <div className="md:mt-4">
+                    <h3 className="text-lg font-semibold mb-1 text-gray-800">
+                      {step.title}
+                    </h3>
+
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-        {/* Projects Section */}
-        {/* <section className="p">
-          <h2 className="text-3xl font-semibold text-center mb-12">
-            Selected UI/UX Projects
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 m-5 bg-amber-200">
-            {projects.map((proj, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="m-5 bg-white/70 border border-gray-200 p-6 rounded-2xl backdrop-blur-md hover:shadow-lg transition-all"
-              >
-                <h3 className="text-xl font-semibold mb-2 text-pink-600">
-                  {proj.title}
-                </h3>
-                <p className="text-gray-700 mb-4">{proj.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {proj.tools.map((tool, i) => (
-                    <span
-                      key={i}
-                      className="text-sm px-3 py-1 bg-gray-100 border border-gray-200 rounded-full text-gray-700"
-                    >
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          <Link
-            to={`/frontend`}
-            className="absolute leftt-20 -bottom-20 border rounded-full border-gray-700 px-4 py-1 mb-20 text-gray-300"
-          >
-            Go to Projects
-          </Link>
-        </section> */}
         {/* Projects Section */}
         <section id="projects" className="py-20 px-4 relative">
           <div className="max-w-6xl mx-auto relative z-10">
@@ -228,13 +219,13 @@ const processSteps = [
   {
     title: "Empathize",
     description:
-      "I begin every project by understanding users and business goals through research, interviews, and analysis to define clear design problems.",
+      "I begin every project by understanding users and business goals through user-centric research, interviews, and analysis.",
     icon: <HandHeart />,
   },
   {
     title: "Define",
     description:
-      "I map out user journeys and explore ideas through wireframes and low-fidelity sketches to create a strong UX foundation.",
+      "I clearly state the users' needs and problems using the information gathered during the Empathize stage",
     icon: <Target />,
   },
   {
