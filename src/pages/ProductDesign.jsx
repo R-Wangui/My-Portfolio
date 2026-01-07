@@ -205,123 +205,7 @@ export default function productDesign() {
             </motion.div>
 
             <div className="space-y-16">
-              {[
-                {
-                  title: "MediCare Mobile App",
-                  subtitle: "Healthcare Appointment Scheduling",
-                  role: "Lead UX Designer",
-                  duration: "6 months",
-                  color: "from-blue-400 to-cyan-400",
-                  emoji: "🏥",
-                  challenge:
-                    "Patients were frustrated with a complex 8-step booking process, leading to 40% abandonment rate. The existing app had poor reviews and low engagement.",
-                  solution:
-                    "Redesigned the entire booking flow using smart defaults and progressive disclosure. Reduced steps to 3, added visual appointment cards, integrated prescription refills, and created a friendly onboarding experience.",
-                  impact: [
-                    { label: "Booking time reduced", value: "60%", icon: Zap },
-                    { label: "User satisfaction", value: "85%", icon: Smile },
-                    {
-                      label: "Completed appointments",
-                      value: "+40%",
-                      icon: CheckCircle,
-                    },
-                  ],
-                  process: [
-                    "Conducted 15 user interviews with patients and doctors",
-                    "Created user personas and journey maps",
-                    "Ran 3 rounds of usability testing with prototypes",
-                    "Collaborated closely with developers for implementation",
-                  ],
-                  tools: ["Figma", "UserTesting", "Maze", "Principle", "Miro"],
-                  deliverables: [
-                    "User Research Report",
-                    "Wireframes & Prototypes",
-                    "Design System",
-                    "Usability Test Results",
-                    "Developer Handoff Docs",
-                  ],
-                },
-                {
-                  title: "EcoShop E-commerce",
-                  subtitle: "Sustainable Shopping Platform",
-                  role: "UI/UX Designer",
-                  duration: "4 months",
-                  color: "from-green-400 to-emerald-400",
-                  emoji: "🌱",
-                  challenge:
-                    "Eco-conscious brand needed to compete with major retailers while maintaining authentic sustainability messaging without appearing preachy or overwhelming shoppers.",
-                  solution:
-                    "Created a clean, trustworthy interface with subtle sustainability badges, impact tracking dashboard, and social proof elements. Focused on making eco-choices feel rewarding rather than guilt-inducing.",
-                  impact: [
-                    { label: "Conversion rate", value: "+75%", icon: Target },
-                    {
-                      label: "Awwwards recognition",
-                      value: "Featured",
-                      icon: Sparkles,
-                    },
-                    { label: "Brand recognition", value: "92%", icon: Heart },
-                  ],
-                  process: [
-                    "Competitive analysis of 12 e-commerce platforms",
-                    "A/B tested 5 different checkout flows",
-                    "Created micro-interactions for delight moments",
-                    "Established comprehensive brand guidelines",
-                  ],
-                  tools: [
-                    "Sketch",
-                    "InVision",
-                    "Hotjar",
-                    "Google Analytics",
-                    "Principle",
-                  ],
-                  deliverables: [
-                    "Brand Guidelines",
-                    "Responsive Designs (Mobile/Desktop/Tablet)",
-                    "Micro-interactions Library",
-                    "A/B Test Reports",
-                    "Marketing Assets",
-                  ],
-                },
-                {
-                  title: "CollabSpace Dashboard",
-                  subtitle: "Team Collaboration SaaS",
-                  role: "Product Designer",
-                  duration: "5 months",
-                  color: "from-purple-400 to-pink-400",
-                  emoji: "🚀",
-                  challenge:
-                    "Users felt overwhelmed by features and struggled to discover key functionality. Low engagement with collaboration tools and high support ticket volume.",
-                  solution:
-                    "Simplified navigation with progressive disclosure pattern. Designed contextual onboarding, created an intuitive command palette, and added smart suggestions based on user behavior.",
-                  impact: [
-                    { label: "Feature adoption", value: "+45%", icon: Zap },
-                    {
-                      label: "Support tickets",
-                      value: "-30%",
-                      icon: CheckCircle,
-                    },
-                    {
-                      label: "App store rating",
-                      value: "4.8/5",
-                      icon: Sparkles,
-                    },
-                  ],
-                  process: [
-                    "Analytics deep-dive to identify drop-off points",
-                    "Created interactive Figma prototypes for stakeholder buy-in",
-                    "Designed component library for consistency",
-                    "Documented design patterns and principles",
-                  ],
-                  tools: ["Figma", "Miro", "Lookback", "Amplitude", "Notion"],
-                  deliverables: [
-                    "User Personas",
-                    "Journey Maps",
-                    "Component Library",
-                    "Design System Documentation",
-                    "Onboarding Flows",
-                  ],
-                },
-              ].map((project, idx) => (
+              {designProjects.map((project, idx) => (
                 <DesignProjectCard key={idx} project={project} index={idx} />
               ))}
             </div>
@@ -370,6 +254,118 @@ const processSteps = [
   //     "I build scalable design systems, document patterns, and collaborate closely with developers for smooth handoff and consistent implementation.",
   //   icon: Zap,
   // },
+];
+const designProjects = [
+  {
+    title: "Team-Iq",
+    subtitle: "AI analytics platform",
+    role: "Lead UX Co-designer",
+    duration: "6 months",
+    color: "from-blue-400 to-cyan-400",
+    emoji: "🚀",
+    challenge:
+      "Users were finding it hard to rate their skill progression, team contribution and work quality over time",
+    solution:
+      "An AI-driven analytics platform that provides actionable insights on team performance, productivity patterns, and collaboration metrics using machine learning.",
+    impact: [
+      { label: "Skill progression", value: "60%", icon: Zap },
+      { label: "Team performance", value: "85%", icon: Smile },
+      {
+        label: "Actionable insights",
+        value: "+40%",
+        icon: CheckCircle,
+      },
+    ],
+    process: [
+      "Conducted user research on existing platforms ans feasibility of the product",
+      "Created user personas and journey maps",
+      "Ran 3 rounds of usability testing with prototypes",
+      "Collaborated closely with developers for implementation",
+    ],
+    tools: ["Figma", "Google Docs", "Dribble"],
+    deliverables: [
+      "User Research Report",
+      "Wireframes & Prototypes",
+      "Design System",
+      "Responsive Designs (Mobile/Desktop)",
+      "Developer Handoff Docs",
+    ],
+  },
+  {
+    title: "Fix-it App",
+    subtitle: "Home maintenance Application",
+    role: "UI/UX Designer",
+    duration: "8 weeks",
+    color: "from-green-400 to-emerald-400",
+    emoji: "🛠️",
+    challenge:
+      "Busy working class individuals hardly have time for home maintenance or fixing issues in their homes.",
+    solution:
+      "Created a product that allows users to access experienced plumbers from within their location at any time of the day or night.",
+    impact: [
+      { label: "Users drop-off", value: "-45%", icon: Target },
+      {
+        label: "Userbility",
+        value: "+70%",
+        icon: Sparkles,
+      },
+      { label: "Brand recognition", value: "92%", icon: Heart },
+    ],
+    process: [
+      "Competitive analysis of 5 home maintenance platforms",
+      "User jouner maps",
+      "Created micro-interactions for delight moments",
+      // "Established comprehensive brand guidelines",
+    ],
+    tools: ["Figma"],
+    deliverables: [
+      "Low and high fidelity ",
+      "Wireframes & Prototypes",
+      // "Responsive Designs (Mobile/Desktop/Tablet)",
+      // "Micro-interactions Library",
+      "Usability studies Reports",
+      // "Marketing Assets",
+    ],
+  },
+  {
+    title: "Bold Beauty",
+    subtitle: "Neubrutalism landing page",
+    role: "Product Designer",
+    duration: "1 week",
+    color: "from-purple-400 to-pink-400",
+    emoji: "💎",
+    challenge:
+      "Users felt overwhelmed by features and struggled to discover key functionality. Low engagement with collaboration tools and high support ticket volume.",
+    solution:
+      "Created a landing page applying the concept of neubrutalism. Used bold color palette and typography, and added intuitive CTA based on user behavior.",
+    impact: [
+      { label: "concept application", value: "98%", icon: Zap },
+      {
+        label: "Userbility",
+        value: "80%",
+        icon: CheckCircle,
+      },
+      {
+        label: "Brand Identity",
+        value: "98%",
+        icon: Sparkles,
+      },
+    ],
+    process: [
+      "Clear application of the concept of nuebrutalism throughout the page",
+      "Created interactive Figma prototypes",
+      // "Designed component library for consistency",
+      // "Documented design patterns and principles",
+    ],
+    tools: ["Figma", "Dribble", "Notion"],
+    deliverables: [
+      "Landing page",
+      // "Journey Maps",
+      // "Component Library",
+      // "Design System Documentation",
+      // "Onboarding Flows",
+    ],
+  },
 ];
 
 // const projects = [

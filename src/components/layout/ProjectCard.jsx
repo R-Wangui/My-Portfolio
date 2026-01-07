@@ -9,6 +9,8 @@ import {
   Layers,
 } from "lucide-react";
 
+
+//Front-end Projects cards
 export const ProjectCard = ({ project, index }) => {
   return (
     <motion.div
@@ -35,26 +37,39 @@ export const ProjectCard = ({ project, index }) => {
           </p>
         </div>
 
-        <div className="flex gap-3 flex-shrink-0">
-          <motion.a
-            href={`https://${project.github}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.1, y: -2 }}
-            className="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center border border-slate-700 hover:border-cyan-400/50 transition-colors"
-          >
-            <Github size={20} className="text-slate-400" />
-          </motion.a>
-          <motion.a
-            href={`https://${project.live}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.1, y: -2 }}
-            className="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center border border-slate-700 hover:border-cyan-400/50 transition-colors"
-          >
-            <ExternalLink size={20} className="text-slate-400" />
-          </motion.a>
-        </div>
+        {project.ongoing ? (
+          <div className="flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-lg flex-shrink-0">
+            <div className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></div>
+            <span className="text-amber-400 font-mono text-sm font-semibold">
+              ONGOING
+            </span>
+          </div>
+        ) : (
+          <div className="flex gap-3 flex-shrink-0">
+            {project.github && (
+              <motion.a
+                href={`https://${project.github}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center border border-slate-700 hover:border-cyan-400/50 transition-colors"
+              >
+                <Github size={20} className="text-slate-400" />
+              </motion.a>
+            )}
+            {project.live && (
+              <motion.a
+                href={`https://${project.live}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="w-10 h-10 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center border border-slate-700 hover:border-cyan-400/50 transition-colors"
+              >
+                <ExternalLink size={20} className="text-slate-400" />
+              </motion.a>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Tech Stack */}
@@ -161,6 +176,7 @@ ProjectCard.propTypes = {
     github: PropTypes.string.isRequired,
     live: PropTypes.string.isRequired,
     gradient: PropTypes.string.isRequired,
+    ongoing: PropTypes.bool,
   }).isRequired,
   index: PropTypes.number.isRequired,
 };

@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 export default function Frontend() {
+  
   return (
     <>
       <div className="min-h-screen bg-slate-950 text-slate-100">
@@ -321,44 +322,85 @@ export default function Frontend() {
 }
 
 const projects = [
+  // {
+  //   title: "Local Dish Corner",
+  //   type: "Dashboard Analytics Web Application",
+  //   description:
+  //     "A data-driven dashboard that tracks and visualizes user engagement metrics for a food-ordering platform, including application visits, food item clicks, and top-ordered meals.",
+  //   tech: ["React", "JavaScript", "Tailwind CSS", "Recharts", "Firebase"],
+  //   responsibilities: [
+  //     "Designed and implemented a scalable analytics dashboard architecture using React and Context API",
+  //     "Modeled Firestore collections to support persistent analytics data across user sessions",
+  //     "Built responsive layouts supporting mobile displays with CSS Grid and Flexbox",
+  //     "Optimized data fetching by separating Firestore queries into a dedicated service layer",
+  //     "Implemented data aggregation logic for visits, clicks per food item, and top-ordered foods",
+  //   ],
+  //   highlights: [
+  //     {
+  //       label: "Load Time",
+  //       value: "-40%",
+  //       desc: "through code splitting & lazy loading",
+  //     },
+  //     {
+  //       label: "Dashboard load",
+  //       value: "Real-time analytics updates",
+  //       desc: "Firestore sync",
+  //     },
+  //     {
+  //       label: "Bundle Size",
+  //       value: "-60%",
+  //       desc: "via Dead Code Elimination",
+  //     },
+  //   ],
+  //   architecture: [
+  //     "Component-driven architecture",
+  //     "Modular service layer for analytics queries",
+  //     "Context API + Tanstack Query for state management",
+  //     "Firebase Realtime Database for storage and authentication",
+  //   ],
+  //   github: "github.com/alexchen/fintrack",
+  //   live: "https://localdishcorner.netlify.app/",
+  //   gradient: "from-blue-500 to-cyan-500",
+  // },
   {
-    title: "Local Dish Corner",
-    type: "Dashboard Analytics Web Application",
+    title: "TeamIq",
+    type: "AI-driven Analytics Application",
     description:
-      "A data-driven dashboard that tracks and visualizes user engagement metrics for a food-ordering platform, including application visits, food item clicks, and top-ordered meals.",
-    tech: ["React", "JavaScript", "Tailwind CSS", "Recharts", "Firebase"],
+      "An intelligent analytics platform that automatically connects to developers’ work tools and uses AI to evaluate the quality, consistency, and impact of their contributions.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts"],
     responsibilities: [
-      "Designed and implemented a scalable analytics dashboard architecture using React and Context API",
-      "Modeled Firestore collections to support persistent analytics data across user sessions",
+      "Designed and implemented a scalable analytics dashboard architecture using Next.js",
+      "Integrated OAuth2 authentication flow with JWT token refresh mechanism",
       "Built responsive layouts supporting mobile displays with CSS Grid and Flexbox",
-      "Optimized data fetching by separating Firestore queries into a dedicated service layer",
-      "Implemented data aggregation logic for visits, clicks per food item, and top-ordered foods",
+      "Optimized data fetching by separating queries into a dedicated service layer",
+      "Implemented real-time WebSocket connections for live data streaming with automatic reconnection logic",
     ],
     highlights: [
       {
-        label: "Load Time",
-        value: "-40%",
-        desc: "through code splitting & lazy loading",
+        label: "Integrated Aplications",
+        value: "1",
+        desc: "Github integrated",
       },
       {
         label: "Dashboard load",
         value: "Real-time analytics updates",
-        desc: "Firestore sync",
+        desc: "ProsgresSQL sync",
       },
       {
-        label: "Bundle Size",
-        value: "-60%",
-        desc: "via Dead Code Elimination",
+        label: "AI Layer ingestion",
+        value: "Ongoing",
+        desc: "End-to-end AI analytics architecture from ingested insights",
       },
     ],
     architecture: [
       "Component-driven architecture",
       "Modular service layer for analytics queries",
       "Context API + Tanstack Query for state management",
-      "Firebase Realtime Database for storage and authentication",
+      "Next.js with App Router for optimal performance",
     ],
     github: "github.com/alexchen/fintrack",
     live: "https://localdishcorner.netlify.app/",
+    ongoing: true,
     gradient: "from-blue-500 to-cyan-500",
   },
   {
@@ -396,6 +438,7 @@ const projects = [
     ],
     github: "github.com/alexchen/streamhub",
     live: "https://isentrytechnologies.com/",
+    ongoing: false,
     gradient: "from-purple-500 to-pink-500",
   },
   {
@@ -436,6 +479,7 @@ const projects = [
     ],
     github: "github.com/alexchen/taskflow",
     live: "https://goldies-frontend-v3.vercel.app",
+    ongoing: false,
     gradient: "from-green-500 to-emerald-500",
   },
 ];
